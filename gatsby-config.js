@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `HeyCode - 前端阿希`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Jason Li - 阿希`,
+      summary: `- 來自香港居住在德國的前端工程師。曾在多間知名國際公司工作，例如 9GAG、Casetify、空腹熊猫等，現正在 eBay 擔任資深軟件工程師。`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
+    description: `HeyCode 用不一樣的角度去學習前端技術。`,
+    siteUrl: `https://heycode001.com/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: "sundy0011",
     },
   },
   plugins: [

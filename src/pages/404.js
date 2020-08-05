@@ -9,9 +9,9 @@ const NotFoundPage = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="404: Not Found" />
-      <h1>Not Found</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+      <SEO title="404: 找不到你要的頁面" />
+      <h1>找不到你要的頁面</h1>
+      <p>你輸入的網頁路徑並不存在</p>
     </Layout>
   )
 }
