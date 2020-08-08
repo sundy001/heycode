@@ -2,10 +2,10 @@ module.exports = {
   siteMetadata: {
     title: `HeyCode - 前端阿希`,
     author: {
-      name: `Jason Li - 阿希`,
-      summary: `- 來自香港居住在德國的前端工程師。曾在多間知名國際公司工作，例如 9GAG、Casetify、空腹熊猫等，現正在 eBay 擔任資深軟件工程師。`,
+      name: `HeyCode - 前端阿希`,
+      summary: `- 哈囉大家好！我是阿希，一位來自香港，現居德國的前端工程師。我會在這𥚃分享前端知識、業內相關資訊、生涯發展等實用資訊。如果你和我一樣喜愛前端，或者你對這行業感到興趣，歡迎透過我各個社交媒體帳號一起交流（連結可在網頁下方找到）。`,
     },
-    description: `HeyCode 用不一樣的角度去學習前端技術。`,
+    description: `不要錯過 HeyCode - 前端阿希帶給你前端知識、軟體工程業內資訊、生涯發展建議等實用資訊！教學內容即學即用，助你在短時間內晉升成為資深前端工程師。`,
     siteUrl: `https://heycode001.com/`,
     social: {
       twitter: "sundy0011",
