@@ -1,7 +1,7 @@
-/** @jsx jsx */
+import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
-import { css, jsx } from "@emotion/core"
+import { css } from "@emotion/core"
 
 import { rhythm, bannerColor } from "../styles/variable"
 import { clearImageLink } from "../styles/utils"

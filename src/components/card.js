@@ -1,7 +1,7 @@
-/** @jsx jsx */
+import React from "react"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
-import { css, jsx } from "@emotion/core"
+import { css } from "@emotion/core"
 
 import { rhythm } from "../styles/variable"
 

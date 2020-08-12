@@ -1,6 +1,6 @@
-/** @jsx jsx */
+import React from "react"
 import { graphql } from "gatsby"
-import { css, jsx } from "@emotion/core"
+import { css } from "@emotion/core"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"

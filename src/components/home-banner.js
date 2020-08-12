@@ -1,6 +1,6 @@
-/** @jsx jsx */
+import React from "react"
 import { Link } from "gatsby"
-import { css, jsx } from "@emotion/core"
+import { css } from "@emotion/core"
 
 import { rhythm, scale, bannerColor, mediumScreen } from "../styles/variable"
 import { container } from "../styles/layout"
