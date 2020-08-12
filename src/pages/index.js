@@ -16,7 +16,7 @@ const BlogIndex = ({ data, location }) => {
       <SEO title="HeyCode - 前端阿希" />
       <Bio
         isHeader
-        style={css`
+        css={css`
           margin-top: ${rhythm(-7)};
 
           @media (${mediumScreen}) {
@@ -34,7 +34,7 @@ const BlogIndex = ({ data, location }) => {
             bannerImage={bannerImage.childImageSharp.fluid}
             date={date}
             slug={node.fields.slug}
-            style={css`
+            css={css`
               width: 100vw;
               margin-left: calc((100vw - 100%) * -0.5);
 
