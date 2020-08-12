@@ -1,10 +1,12 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+/** @jsx jsx */
+import { graphql } from "gatsby"
+import { css, jsx } from "@emotion/core"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
+import Card from "../components/card"
+import { rhythm } from "../styles/variable"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
@@ -12,32 +14,24 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
-      <Bio />
+      <SEO title="HeyCode - 前端阿希" />
+      <Bio
+        isHeader
+        style={css`
+          margin-top: ${rhythm(-2)};
+        `}
+      />
       {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug
+        const { title, description, bannerImage, date } = node.frontmatter
         return (
-          <article key={node.fields.slug}>
-            <header>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-            </header>
-            <section>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
-            </section>
-          </article>
+          <Card
+            key={node.fields.slug}
+            title={title}
+            description={description}
+            bannerImage={bannerImage.childImageSharp.fluid}
+            date={date}
+            slug={node.fields.slug}
+          />
         )
       })}
     </Layout>
@@ -61,9 +55,17 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "DD-MM-YYYY")
             title
             description
+            tags
+            bannerImage {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }
