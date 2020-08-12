@@ -1,9 +1,10 @@
 /** @jsx jsx */
 import { Fragment } from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import { css, jsx } from "@emotion/core"
 
 import HomeBanner from "./home-banner"
+import Header from "./header"
 import { container } from "../styles/layout"
 import { clearImageLink } from "../styles/utils"
 import { rhythm } from "../styles/variable"
@@ -12,7 +13,7 @@ const socialIconStyle = css`
   width: ${rhythm(1.5)};
 `
 
-const Layout = ({ location, title, children }) => {
+const Layout = ({ location, children }) => {
   const data = useStaticQuery(graphql`
     query LayoutQuery {
       banner: file(absolutePath: { regex: "/banner.png/" }) {
@@ -30,24 +31,7 @@ const Layout = ({ location, title, children }) => {
   if (location.pathname === rootPath) {
     header = <HomeBanner bannerSrc={data.banner.childImageSharp.fluid.src} />
   } else {
-    header = (
-      <h3
-        css={css`
-          fontfamily: Montserrat, sans-serif;
-          margintop: 0;
-        `}
-      >
-        <Link
-          css={css`
-            boxshadow: none;
-            color: inherit;
-          `}
-          to={`/`}
-        >
-          {title}
-        </Link>
-      </h3>
-    )
+    header = <Header />
   }
   return (
     <Fragment>

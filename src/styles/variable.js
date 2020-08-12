@@ -51,5 +51,9 @@ if (process.env.NODE_ENV !== `production`) {
 export default typography
 export const rhythm = typography.rhythm
 export const scale = typography.scale
-export const backgroundColor = "#fff"
+
 export const containerMaxWidth = rhythm(24)
+
+// color
+export const backgroundColor = "#fff"
+export const bannerColor = "#e5e5e5"

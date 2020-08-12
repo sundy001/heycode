@@ -4,7 +4,7 @@ export const clearImageLink = css`
   border-style: none;
   box-shadow: none;
 
-  > img {
+  img {
     margin: 0;
   }
 `

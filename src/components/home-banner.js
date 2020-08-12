@@ -2,7 +2,7 @@
 import { Link } from "gatsby"
 import { css, jsx } from "@emotion/core"
 
-import { rhythm, scale } from "../styles/variable"
+import { rhythm, scale, bannerColor } from "../styles/variable"
 import { container } from "../styles/layout"
 
 const HomeBanner = ({ bannerSrc }) => {
@@ -14,7 +14,7 @@ const HomeBanner = ({ bannerSrc }) => {
             rgba(255, 255, 255, 100%) 0%,
             rgba(255, 255, 255, 0) ${rhythm(4)}
           ),
-          bottom right / cover no-repeat url(${bannerSrc}), #e5e5e5;
+          bottom right / cover no-repeat url(${bannerSrc}), ${bannerColor};
         font-size: 50px;
         height: ${rhythm(12)};
         @media (min-width: 420px) {

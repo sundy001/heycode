@@ -1,7 +1,7 @@
 /** @jsx jsx */
-import { css, jsx } from "@emotion/core"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
+import { css, jsx } from "@emotion/core"
 
 import { rhythm } from "../styles/variable"
 
