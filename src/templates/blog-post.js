@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
+import { css } from "@emotion/core"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -25,28 +26,28 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       <article>
         <header>
           <h1
-            style={{
-              marginTop: rhythm(1),
-              marginBottom: 0,
-            }}
+            css={css`
+              margintop: ${rhythm(1)};
+              marginbottom: 0;
+            `}
           >
             {post.frontmatter.title}
           </h1>
           <p
-            style={{
-              ...scale(-1 / 5),
-              display: `block`,
-              marginBottom: rhythm(1),
-            }}
+            css={css`
+              ${scale(-1 / 5)};
+              display: block;
+              marginbottom: ${rhythm(1)};
+            `}
           >
             {post.frontmatter.date}
           </p>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
+          css={css`
+            marginbottom: ${rhythm(1)};
+          `}
         />
         <footer>
           <Bio />
@@ -55,13 +56,13 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 
       <nav>
         <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
+          css={css`
+            display: flex;
+            flexwrap: wrap;
+            justifycontent: space-between;
+            liststyle: none;
+            padding: 0;
+          `}
         >
           <li>
             {previous && (
