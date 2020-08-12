@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 import { css, jsx } from "@emotion/core"
 
-import { rhythm } from "../styles/variable"
+import { rhythm, mediumScreen } from "../styles/variable"
 
 const Bio = ({ isHeader, style }) => {
   const data = useStaticQuery(graphql`
@@ -33,7 +33,14 @@ const Bio = ({ isHeader, style }) => {
       css={css`
         ${style}
         display: flex;
+        flex-direction: column;
+        align-items: center;
         margin-bottom: ${rhythm(1)};
+
+        @media (${mediumScreen}) {
+          flex-direction: row;
+          align-items: flex-start;
+        }
       `}
     >
       <Image
@@ -41,10 +48,11 @@ const Bio = ({ isHeader, style }) => {
         alt={author.name}
         css={css`
           margin-right: ${rhythm(0.5)};
-          margin-bottom: 0;
+          margin-bottom: ${rhythm(0.5)};
           min-width: ${size};
           height: ${size};
           border-radius: 100%;
+          border: 3px solid #fff;
         `}
         imgStyle={{
           borderRadius: `50%`,
@@ -60,7 +68,6 @@ const Bio = ({ isHeader, style }) => {
         </p>
         <iframe
           src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fheycode001&width=450&layout=standard&action=like&size=small&share=true&height=35&appId=470131336417058"
-          width="450"
           height="35"
           css={css`
             border: none;

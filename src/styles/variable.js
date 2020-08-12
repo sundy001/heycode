@@ -57,3 +57,6 @@ export const containerMaxWidth = rhythm(24)
 // color
 export const backgroundColor = "#fff"
 export const bannerColor = "#e5e5e5"
+
+// screen size
+export const mediumScreen = "min-width: 640px"

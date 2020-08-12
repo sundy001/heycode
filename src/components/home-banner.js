@@ -2,7 +2,7 @@
 import { Link } from "gatsby"
 import { css, jsx } from "@emotion/core"
 
-import { rhythm, scale, bannerColor } from "../styles/variable"
+import { rhythm, scale, bannerColor, mediumScreen } from "../styles/variable"
 import { container } from "../styles/layout"
 
 const HomeBanner = ({ bannerSrc }) => {
@@ -32,11 +32,14 @@ const HomeBanner = ({ bannerSrc }) => {
       >
         <h1
           css={css`
-            ${scale(1.5)};
             display: inline;
-            margin: 0 ${rhythm(0.5)};
+            margin: -${rhythm(5)} ${rhythm(0.5)} 0;
             background: #fff;
             box-shadow: ${rhythm(0.5)} 0 0 0 #fff, -${rhythm(0.5)} 0 0 0 #fff;
+            @media (${mediumScreen}) {
+              ${scale(1.5)};
+              margin-top: 0;
+            }
           `}
         >
           <Link

@@ -6,7 +6,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Card from "../components/card"
-import { rhythm } from "../styles/variable"
+import { mediumScreen, rhythm } from "../styles/variable"
 
 const BlogIndex = ({ data, location }) => {
   const posts = data.allMarkdownRemark.edges
@@ -17,7 +17,11 @@ const BlogIndex = ({ data, location }) => {
       <Bio
         isHeader
         style={css`
-          margin-top: ${rhythm(-2)};
+          margin-top: ${rhythm(-7)};
+
+          @media (${mediumScreen}) {
+            margin-top: ${rhythm(-2)};
+          }
         `}
       />
       {posts.map(({ node }) => {
@@ -30,6 +34,15 @@ const BlogIndex = ({ data, location }) => {
             bannerImage={bannerImage.childImageSharp.fluid}
             date={date}
             slug={node.fields.slug}
+            style={css`
+              width: 100vw;
+              margin-left: calc((100vw - 100%) * -0.5);
+
+              @media (${mediumScreen}) {
+                width: 100%;
+                margin-left: 0;
+              }
+            `}
           />
         )
       })}

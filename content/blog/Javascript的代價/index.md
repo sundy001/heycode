@@ -35,7 +35,7 @@ tags: ["JavaScript", "網頁效能"]
 當用戶進入網站時，瀏覽器就開始忙碌地工作起來。從瀏覽器的角度來看有點像這樣：
 
 <div style="text-align: center;">
-  <img alt="忙碌的瀏覽器" src="https://media.giphy.com/media/3DnDRfZe2ubQc/giphy.gif">
+  <img alt="忙碌的瀏覽器" src="https://media.giphy.com/media/3DnDRfZe2ubQc/giphy.gif" loading=lazy>
 </div>
 
 瀏覽器既要一邊下載網頁資源，又要進行畫面宣染，還要解析及執行 JavaScript。在 Chrome 的開發者工具中，大家可以看到黃色的部分是 JavaScript 的執行時間。至於代碼解析的工作，最新的 V8 能夠把它們分配到工作線程（worker threads）上並行執行，不阻礙主線程的運作；但非 V8 的瀏覽器就沒法享受這項優化。

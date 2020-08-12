@@ -5,10 +5,11 @@ import { css, jsx } from "@emotion/core"
 
 import { rhythm } from "../styles/variable"
 
-const Card = ({ title, description, bannerImage, date, slug }) => {
+const Card = ({ title, description, bannerImage, date, slug, style }) => {
   return (
     <article
       css={css`
+        ${style}
         position: relative;
       `}
     >
@@ -19,7 +20,13 @@ const Card = ({ title, description, bannerImage, date, slug }) => {
         `}
         to={slug}
       >
-        <Img fluid={bannerImage} alt={title} />
+        <Img
+          css={css`
+            min-height: ${rhythm(9)};
+          `}
+          fluid={bannerImage}
+          alt={title}
+        />
         <div
           css={css`
             padding: ${rhythm(1 / 2)};

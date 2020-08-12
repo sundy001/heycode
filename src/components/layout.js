@@ -54,6 +54,7 @@ const Layout = ({ location, children }) => {
               css={socialIconStyle}
               src="/facebook.svg"
               alt="HeyCode - 前端阿希臉書專頁"
+              loading="lazy"
             />
           </a>
           &nbsp;&nbsp;
@@ -67,6 +68,7 @@ const Layout = ({ location, children }) => {
               css={socialIconStyle}
               src="/twitter.svg"
               alt="HeyCode - 前端阿希 Twitter"
+              loading="lazy"
             />
           </a>
         </footer>
