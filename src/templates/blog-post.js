@@ -20,7 +20,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       />
       <Helmet
         htmlAttributes={{
-          style: "font-size: 21px;",
+          style: { fontSize: "21px" },
         }}
       />
       <article>
